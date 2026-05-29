@@ -55,82 +55,19 @@ L'application offre une interface utilisateur moderne et réactive avec une exce
 ## 📸 Captures d'Écran
 
 ### Écran 1 - Liste des Produits
-```
-┌─────────────────────────────┐
-│  ≡ PAKA E-Commerce      🔍  │
-├─────────────────────────────┤
-│                             │
-│  [Produit 1]   Prix: 29,99€ │
-│  ▭▭▭▭▭ (5/5) ⭐           │
-│  [Ajouter au panier]        │
-│                             │
-│  [Produit 2]   Prix: 49,99€ │
-│  ▭▭▭▭░ (4/5) ⭐           │
-│  [Ajouter au panier]        │
-│                             │
-│  [Produit 3]   Prix: 89,99€ │
-│  ▭▭▭▭▭ (5/5) ⭐           │
-│  [Ajouter au panier]        │
-│                             │
-└─────────────────────────────┘
-```
+
+<img width="540" height="1230" alt="image" src="https://github.com/user-attachments/assets/90fc7d52-c16f-49dd-8495-7bf24467aada" />
+
 
 ### Écran 2 - Détails du Produit
-```
-┌─────────────────────────────┐
-│  < Détails du Produit    ⭐  │
-├─────────────────────────────┤
-│                             │
-│      [    IMAGE PRODUIT   ] │
-│                             │
-│  Produit Premium            │
-│  Prix: 79,99€              │
-│  ▭▭▭▭▭ (5/5) - 234 avis  │
-│                             │
-│  Description:               │
-│  Produit de haute qualité   │
-│  avec garantie 2 ans.       │
-│                             │
-│  Quantité: [1] [+][-]      │
-│                             │
-│  [Ajouter au Panier]        │
-│  [Continuer Shopping]       │
-│                             │
-└─────────────────────────────┘
-```
+
+<img width="540" height="1230" alt="image" src="https://github.com/user-attachments/assets/5c8c9266-dc04-45c2-aabc-5765272cc893" />
+
 
 ### Écran 3 - Panier d'Achat
-```
-┌─────────────────────────────┐
-│  ☰ Panier (3 articles)      │
-├─────────────────────────────┤
-│                             │
-│  Produit 1          29,99€  │
-│  Qty: 2            x 59,98€ │
-│  [✕]                        │
-│                             │
-│  Produit 2          49,99€  │
-│  Qty: 1            x 49,99€ │
-│  [✕]                        │
-│                             │
-│  Produit 3          89,99€  │
-│  Qty: 1            x 89,99€ │
-│  [✕]                        │
-│                             │
-│  ───────────────────────    │
-│  Sous-total:        199,96€ │
-│  Frais livraison:     9,99€ │
-│  Taxes:              20,99€ │
-│                             │
-│  TOTAL:            230,94€  │
-│                             │
-│  [Valider la Commande]      │
-│  [Continuer Shopping]       │
-│                             │
-└─────────────────────────────┘
-```
+<img width="1080" height="2460" alt="image" src="https://github.com/user-attachments/assets/f706e359-fbd4-4c3e-8132-116e210831d9" />
 
----
+
 
 ## 🔧 Difficultés Rencontrées et Solutions
 
@@ -140,8 +77,7 @@ Durant le développement de cette application, la principale difficulté a été
 
 ## 💡 Améliorations Possibles
 
-Si nous disposions de plus de temps, nous pourrions implémenter : (1) un **système d'authentification utilisateur complet** avec connexion/inscription et sauvegarde du profil, (2) une **intégration avec une API backend réelle** pour charger les produits dynamiquement, (3) un **système de notifications push** pour informer les utilisateurs des offres spéciales et mises à jour de commandes, (4) un **mode sombre/clair** avec sauvegarde des préférences utilisateur, (5) des **paiements intégrés** avec Stripe ou PayPal, (6) un **système de filtrage et recherche avancé** avec plusieurs critères, et (7) des **tests unitaires et d'intégration complets** pour garantir la robustesse de l'application.
-
+Si nous disposions de plus de temps, nous pourrions implémenter : (1) un **système d'authentification utilisateur complet** avec connexion/inscription et sauvegarde du profil, (2) une **intégration avec une API backend réelle** pour charger les produits dynamiquement, (3) un **système de notifications push** pour informer les utilisateurs des offres spéciales et mises à jour de commandes, (4) un **mode sombre/clair** avec sauvegarde des préférences utilisateur
 ---
 
 ## 🔗 Version Alternative
@@ -149,9 +85,3 @@ Si nous disposions de plus de temps, nous pourrions implémenter : (1) un **syst
 Cette application est également disponible en **Flutter** :
 👉 [Voir la version Flutter/Dart](https://github.com/paka-ops/flutter_tp)
 
----
-
-## 📝 Licence
-Ce projet est fourni à titre éducatif.
-
-**Développé avec ❤️ en Kotlin et Jetpack Compose**
