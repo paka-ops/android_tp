@@ -1,7 +1,7 @@
 # PAKA - Application Mobile E-commerce
 
 ## 👤 Auteur(s)
-**PAKA Essosolim Joel**
+**PAKA Essosolim Joel & AGBO Akoko Ayawa Albertine**
 
 ---
 
