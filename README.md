@@ -73,14 +73,7 @@ L'application offre une interface utilisateur moderne et réactive avec une exce
 
 Durant le développement de cette application, la principale difficulté a été la **gestion complexe de l'état avec Compose** et l'intégration de la **persistance des données avec Room**. L'état du panier devait rester synchronisé entre plusieurs écrans, ce qui a initialement créé des bugs d'affichage. La solution adoptée a été d'implémenter un **ViewModel centralisé** qui gère l'état global du panier via des `StateFlow`, et d'intégrer **Room Database** pour persister les données localement. Cela a permis une synchronisation fluide entre les écrans et une meilleure réactivité de l'interface.
 
----
 
-## 💡 Améliorations Possibles
-
-Si nous disposions de plus de temps, nous pourrions implémenter : (1) un **système d'authentification utilisateur complet** avec connexion/inscription et sauvegarde du profil, (2) une **intégration avec une API backend réelle** pour charger les produits dynamiquement, (3) un **système de notifications push** pour informer les utilisateurs des offres spéciales et mises à jour de commandes, (4) un **mode sombre/clair** avec sauvegarde des préférences utilisateur
----
-
-## 🔗 Version Alternative
 
 Cette application est également disponible en **Flutter** :
 👉 [Voir la version Flutter/Dart](https://github.com/paka-ops/flutter_tp)
