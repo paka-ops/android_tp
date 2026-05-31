@@ -23,7 +23,6 @@ class OrderViewModel : ViewModel() {
         viewModelScope.launch {
             val db = AppDatabase.getDatabase(context)
 
-            // Sauvegarde commande
             val order = OrderEntity(
                 total = total,
                 customerName = name,
@@ -32,7 +31,6 @@ class OrderViewModel : ViewModel() {
             )
             db.orderDao().insert(order)
 
-            // Vide le panier
             db.cartDao().clearAll()
 
             onSuccess()

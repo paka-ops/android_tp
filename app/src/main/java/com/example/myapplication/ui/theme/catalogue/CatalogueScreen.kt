@@ -23,7 +23,6 @@ fun CatalogScreen(navController: NavController, vm: CatalogViewModel = viewModel
     val error by vm.errorMessage.collectAsState()
     val categories by vm.categories.collectAsState()
     Column(modifier = Modifier.fillMaxSize()) {
-// Barre de catégories (débutant : scrollable mais pas optimisé)
         ScrollableTabRow(
             selectedTabIndex = 0,
             edgePadding = 0.dp

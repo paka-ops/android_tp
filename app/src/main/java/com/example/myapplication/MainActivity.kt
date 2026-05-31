@@ -32,7 +32,6 @@ class MainActivity : ComponentActivity() {
         setContent {
            MyApplicationTheme {
                 val navController = rememberNavController()
-// Items de la bottom bar (débutant : hardcodé ici)
                 val items = listOf(
                         "catalog" to Icons.Default.Home to "Produits",
                 "cart" to Icons.Default.ShoppingCart to "Panier",
@@ -66,7 +65,7 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
                     NavGraph(
                         navController = navController,
-                        modifier = Modifier.padding(innerPadding) // Débutant : gère mal les paddings parfois
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }

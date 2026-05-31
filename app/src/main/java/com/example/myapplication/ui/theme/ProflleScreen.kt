@@ -17,19 +17,15 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ProfileViewModel : ViewModel() {
-    // Débutant : pas de DataStore, juste des états en mémoire !
     var name = mutableStateOf("Jean Dupont")
     var email = mutableStateOf("jean@email.com")
     var phone = mutableStateOf("0601020304")
     var isDarkMode = mutableStateOf(false)
 
     fun clearData(context: Context, onCleared: () -> Unit) {
-        // On lance une coroutine sur le Dispatcher IO (optimisé pour la base de données)
         CoroutineScope(Dispatchers.IO).launch {
-            // 1. Action en arrière-plan (écriture/suppression DB)
             AppDatabase.getDatabase(context).cartDao().clearAll()
 
-            // 2. Retour sur le thread principal pour mettre à jour l'interface (UI)
             withContext(Dispatchers.Main) {
                 onCleared()
             }
@@ -68,7 +64,7 @@ fun ProfileScreen(vm: ProfileViewModel = androidx.lifecycle.viewmodel.compose.vi
             modifier = Modifier.fillMaxWidth()
         )
 
-        Button(onClick = { /* Sauvegarde fictive */ }) {
+        Button(onClick = { }) {
             Text("Sauvegarder")
         }
 

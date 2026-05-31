@@ -12,21 +12,20 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.myapplication.data.Product
 
-// Débutant : widget réutilisable mais avec des magic numbers
 @Composable
 fun ProductCard(product: Product, onClick: () -> Unit) {
     Card(
         modifier = Modifier
-            .padding(8.dp) // Magic number
+            .padding(8.dp)
             .fillMaxWidth()
-            .height(250.dp) // Hardcodé
+            .height(250.dp)
             .clickable { onClick() },
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
         Column {
             AsyncImage(
                 model = product.image,
-                contentDescription = null, // Débutant : oublie l'accessibilité
+                contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(150.dp),

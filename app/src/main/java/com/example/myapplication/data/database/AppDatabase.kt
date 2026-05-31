@@ -53,7 +53,6 @@ interface OrderDao {
 abstract class AppDatabase : RoomDatabase() {
     abstract fun cartDao(): CartDao
     abstract fun orderDao(): OrderDao
-    // Débutant : Companion object pour singleton (pas de Hilt)
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null

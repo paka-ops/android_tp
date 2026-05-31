@@ -32,7 +32,6 @@ fun DetailScreen(
     val isLoading by vm.isLoading.collectAsState()
     val qty by vm.quantity.collectAsState()
 
-    // Débutant : charge dans un LaunchedEffect sans clé parfois
     LaunchedEffect(productId) {
         vm.loadProduct(productId)
     }
@@ -97,7 +96,6 @@ fun DetailScreen(
 
                 Spacer(Modifier.height(24.dp))
 
-                // Sélecteur quantité
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.fillMaxWidth()

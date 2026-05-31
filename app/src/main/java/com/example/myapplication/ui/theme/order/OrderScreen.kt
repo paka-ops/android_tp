@@ -19,7 +19,7 @@ import com.example.myapplication.ui.theme.cart.CartViewModel
 @Composable
 fun OrderScreen(navController: NavController, vm: OrderViewModel = viewModel()) {
     val context = LocalContext.current
-    val cartVm = remember { CartViewModel() }  // Débutant : crée une nouvelle instance !
+    val cartVm = remember { CartViewModel() }
 
     val cartItems by cartVm.items.collectAsState()
     val total by cartVm.totalPrice.collectAsState()
@@ -30,7 +30,6 @@ fun OrderScreen(navController: NavController, vm: OrderViewModel = viewModel()) 
     var city by remember { mutableStateOf("") }
     var showError by remember { mutableStateOf(false) }
 
-    // Charge le panier
     LaunchedEffect(Unit) {
         cartVm.loadCart(context)
     }
@@ -87,7 +86,6 @@ fun OrderScreen(navController: NavController, vm: OrderViewModel = viewModel()) 
 
         Spacer(Modifier.height(16.dp))
 
-        // Récapitulatif
         Text("Récapitulatif", style = MaterialTheme.typography.titleMedium)
         Text("${cartItems.size} articles")
         Text("Total: ${String.format("%.2f", total)} €")

@@ -18,7 +18,6 @@ class DetailViewModel : ViewModel() {
             try {
                 product.value = RetrofitClient.instance.getProduct(id)
             } catch (e: Exception) {
-// Débutant : ignore l'erreur
             } finally {
                 isLoading.value = false
             }
@@ -33,14 +32,12 @@ class DetailViewModel : ViewModel() {
         if (quantity.value > 1) quantity.value--
     }
 
-    // Débutant : logique d'ajout au panier dans le VM de détail
     fun addToCart(context: android.content.Context, onSuccess: () -> Unit) {
         viewModelScope.launch {
             val db = AppDatabase.getDatabase(context)
             val currentProduct = product.value ?: return@launch
             val existing = db.cartDao().getById(currentProduct.id)
             if (existing != null) {
-// Update quantité
                 val updated = existing.copy(quantity = existing.quantity + quantity.value)
                 db.cartDao().insert(updated)
             } else {

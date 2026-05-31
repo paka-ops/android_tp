@@ -25,7 +25,6 @@ fun CartScreen(navController: NavController, vm: CartViewModel = viewModel()) {
     val items by vm.items.collectAsState()
     val total by vm.totalPrice.collectAsState()
 
-    // Débutant : charge dans le composable
     LaunchedEffect(Unit) {
         vm.loadCart(context)
     }

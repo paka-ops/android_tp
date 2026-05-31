@@ -18,12 +18,12 @@ import com.example.myapplication.ui.theme.order.OrderScreen
 @Composable
 fun NavGraph(
     navController: NavHostController,
-    modifier: Modifier = Modifier // On ajoute le paramètre modifier ici
+    modifier: Modifier = Modifier
 ) {
     NavHost(
         navController = navController,
         startDestination = "catalog",
-        modifier = modifier // On applique le modifier (qui contient le padding du Scaffold)
+        modifier = modifier
     ) {
         composable("catalog") { CatalogScreen(navController) }
 
