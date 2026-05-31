@@ -5,9 +5,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-// Débutant : singleton global mal fait
+
 object RetrofitClient {
-    private const val BASE_URL = "https://fakestoreapi.com/" // hardcodé
+    private const val BASE_URL = "https://fakestoreapi.com/"
     val instance: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
