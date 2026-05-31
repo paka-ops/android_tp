@@ -3,7 +3,6 @@ package com.example.myapplication.data.database
 import android.content.Context
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
-// Débutant : Converters oubliés au début puis ajoutés en urgence
 class Converters {
     @TypeConverter
     fun fromString(value: String): List<String> {
@@ -65,7 +64,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "market_database"
                 )
-                    .fallbackToDestructiveMigration() // Débutant : destructif par facilité
+                    .fallbackToDestructiveMigration() 
                     .build()
                 INSTANCE = instance
                 instance
